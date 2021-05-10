@@ -1,18 +1,36 @@
 \documentclass{report}
+
+% define margins and whatever
+\usepackage[margin=3cm,top=3cm,includefoot]{geometry}
+
+% character set of latex
 \usepackage[utf8]{inputenc}
+
+% import graphics
 \usepackage{graphicx}
+
+% exact position of figures
 \usepackage{float}
+
+% triple figures and whatever
 \usepackage{subfig}
+
+% to create the beautiful header
+\usepackage{fancyhdr}
 
 % TOFILL: change the variables to personalize
 \newcommand{\logoImagePath}{templateImages/logo.png}
 \newcommand{\projectName}{EXAMPLE TITLE}
 \newcommand{\projectAuthorName}{Iquer Galardi}
 
-
+% remove tabular at paragraph
 \setlength{\parindent}{0cm}
+
+% from 0.X to just X in sections
 \renewcommand{\thesection}{\arabic{section}}
-\newcommand{\newChapter}[1]{\newpage \section{#1}}
+
+% chapter command, newpage and section
+\newcommand{\newChapter}[1]{\newpage \vspace{1cm} \section{#1}}
 
 % begin of the template
 \begin{document}
@@ -35,15 +53,16 @@
             \LARGE \projectAuthorName\\
         \end{flushright}
     \end{titlepage}
+
+    \pagestyle{fancy}
+    \fancyhf{}
+    \lhead{\includegraphics[scale=.1]{templateImages/logo.png}}
+    \rhead{\projectName}
+
     \newpage
 
     \tableofcontents
     \newpage
 
     \newChapter{lskdfjañl}
-    \newChapter{ñalskdfjañl}
-    \newChapter{ñalskdfjañl}
-    \newChapter{ñalskdfjañl}
-    \newChapter{ñalskdfjañl}
-    \newChapter{ñalskdfjañl}
 \end{document}
