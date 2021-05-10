@@ -1,0 +1,49 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subfig}
+
+% TOFILL: change the variables to personalize
+\newcommand{\logoImagePath}{templateImages/logo.png}
+\newcommand{\projectName}{EXAMPLE TITLE}
+\newcommand{\projectAuthorName}{Iquer Galardi}
+
+
+\setlength{\parindent}{0cm}
+\renewcommand{\thesection}{\arabic{section}}
+\newcommand{\newChapter}[1]{\newpage \section{#1}}
+
+% begin of the template
+\begin{document}
+    % Define the title page
+    \begin{titlepage}
+        \begin{center}
+            % include the logo
+            \includegraphics[width=0.6\textwidth]{\logoImagePath}
+            
+            % put the project title
+            \Huge{\textbf{\projectName}}
+        \end{center}
+        
+        % add the vertical bar
+        \hrule
+
+        % Add project author at the bottom
+        \vspace{8cm}
+        \begin{flushright}
+            \LARGE \projectAuthorName\\
+        \end{flushright}
+    \end{titlepage}
+    \newpage
+
+    \tableofcontents
+    \newpage
+
+    \newChapter{lskdfjañl}
+    \newChapter{ñalskdfjañl}
+    \newChapter{ñalskdfjañl}
+    \newChapter{ñalskdfjañl}
+    \newChapter{ñalskdfjañl}
+    \newChapter{ñalskdfjañl}
+\end{document}
