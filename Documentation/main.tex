@@ -1,7 +1,7 @@
-\documentclass{report}
+\documentclass{article}
 
 % define margins and whatever
-\usepackage[margin=3cm,top=3cm,includefoot]{geometry}
+\usepackage[margin=3cm,top=3cm,includefoot,headheight=28pt]{geometry}
 
 % character set of latex
 \usepackage[utf8]{inputenc}
@@ -34,6 +34,11 @@
 
 % begin of the template
 \begin{document}
+    \pagestyle{fancy}
+    \fancyhf{}
+    \lhead{\includegraphics[scale=.1]{templateImages/logo.png}}
+    \rhead{\projectName}
+    
     % Define the title page
     \begin{titlepage}
         \begin{center}
@@ -54,15 +59,10 @@
         \end{flushright}
     \end{titlepage}
 
-    \pagestyle{fancy}
-    \fancyhf{}
-    \lhead{\includegraphics[scale=.1]{templateImages/logo.png}}
-    \rhead{\projectName}
 
     \newpage
-
     \tableofcontents
     \newpage
 
-    \newChapter{lskdfjañl}
+    \input{body.tex}
 \end{document}
