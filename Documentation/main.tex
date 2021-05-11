@@ -32,8 +32,19 @@
 % chapter command, newpage and section
 \newcommand{\newChapter}[1]{\newpage \vspace{1cm} \section{#1}}
 
+% figure related commands
+\newcommand{\newFigure}[3]{
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=.4\textwidth]{#1}
+        \caption{#2}
+        \label{fig:#3}
+    \end{figure}
+}
+
 % begin of the template
 \begin{document}
+    % setup header
     \pagestyle{fancy}
     \fancyhf{}
     \lhead{\includegraphics[scale=.1]{templateImages/logo.png}}
@@ -59,7 +70,7 @@
         \end{flushright}
     \end{titlepage}
 
-
+    % add the table of contents
     \newpage
     \tableofcontents
     \newpage
