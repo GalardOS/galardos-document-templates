@@ -1,7 +1,7 @@
 \documentclass{article}
 
 % define margins and whatever
-\usepackage[margin=3cm,top=3cm,includefoot,headheight=28pt]{geometry}
+\usepackage[margin=3cm,top=3cm,includefoot,headheight=35pt]{geometry}
 
 % character set of latex
 \usepackage[utf8]{inputenc}
@@ -20,7 +20,8 @@
 
 % TOFILL: change the variables to personalize
 \newcommand{\logoImagePath}{templateImages/logo.png}
-\newcommand{\projectName}{EXAMPLE TITLE}
+\newcommand{\projectName}{EXAMPLE PROJECT}
+\newcommand{\projectDocumentName}{Project Document}
 \newcommand{\projectAuthorName}{Iquer Galardi}
 
 % remove tabular at paragraph
@@ -37,7 +38,7 @@
     % setup header
     \pagestyle{fancy}
     \fancyhf{}
-    \lhead{\includegraphics[scale=.1]{templateImages/logo.png}}
+    \lhead{\includegraphics[height=30pt,keepaspectratio]{templateImages/logo.png}}
     \rhead{\projectName}
     
     % Define the title page
@@ -52,6 +53,9 @@
         
         % add the vertical bar
         \hrule
+        \begin{center}
+            \Huge{\projectDocumentName}
+        \end{center}
 
         % Add project author at the bottom
         \vspace{8cm}
