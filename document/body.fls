@@ -1,0 +1,6 @@
+PWD /home/iquer/Projects/galardos-document-templates/document
+INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
+INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
+INPUT /home/iquer/.texlive2021/texmf-var/web2c/pdftex/latex.fmt
+INPUT body.tex
+OUTPUT body.log

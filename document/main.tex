@@ -1,0 +1,73 @@
+\documentclass{article}
+
+% define margins and whatever
+\usepackage[margin=3cm,top=3cm,includefoot,headheight=35pt]{geometry}
+
+% character set of latex
+\usepackage[utf8]{inputenc}
+
+% import graphics
+\usepackage{graphicx}
+
+% exact position of figures
+\usepackage{float}
+
+% triple figures and whatever
+\usepackage{subfig}
+
+% to create the beautiful header
+\usepackage{fancyhdr}
+
+% TOFILL: change the variables to personalize
+\newcommand{\logoImagePath}{templateImages/logo.png}
+\newcommand{\projectName}{EXAMPLE PROJECT}
+\newcommand{\projectDocumentName}{Project Document}
+\newcommand{\projectAuthorName}{Iquer Galardi}
+
+% remove tabular at paragraph
+\setlength{\parindent}{0cm}
+
+% from 0.X to just X in sections
+\renewcommand{\thesection}{\arabic{section}}
+
+% chapter command, newpage and section
+\newcommand{\newChapter}[1]{\newpage \vspace{1cm} \section{#1}}
+
+% begin of the template
+\begin{document}
+    % setup header
+    \pagestyle{fancy}
+    \fancyhf{}
+    \lhead{\includegraphics[height=30pt,keepaspectratio]{templateImages/logo.png}}
+    \rhead{\projectName}
+    
+    % Define the title page
+    \begin{titlepage}
+        \begin{center}
+            % include the logo
+            \includegraphics[width=0.6\textwidth]{\logoImagePath}
+            
+            % put the project title
+            \Huge{\textbf{\projectName}}
+        \end{center}
+        
+        % add the vertical bar
+        \hrule
+        \begin{center}
+            \Huge{\projectDocumentName}
+        \end{center}
+
+        % Add project author at the bottom
+        \vspace{8cm}
+        \begin{flushright}
+            \LARGE \projectAuthorName\\
+        \end{flushright}
+    \end{titlepage}
+
+    % add the table of contents
+    \newpage
+    \tableofcontents
+    \newpage
+
+    \input{body.tex}
+\end{document}
