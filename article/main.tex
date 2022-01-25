@@ -1,0 +1,59 @@
+\documentclass{article}
+
+% define margins and whatever
+\usepackage[margin=3cm,top=3cm,includefoot,headheight=35pt]{geometry}
+
+% character set of latex
+\usepackage[utf8]{inputenc}
+
+% import graphics
+\usepackage{graphicx}
+
+% exact position of figures
+\usepackage{float}
+
+% triple figures and whatever
+\usepackage{subfig}
+
+% to create the beautiful header
+\usepackage{fancyhdr}
+
+% multiple columns support
+\usepackage{multicol}
+
+% TOFILL: change the variables to personalize
+\newcommand{\logoImagePath}{templateImages/logo.png}
+\newcommand{\projectName}{EXAMPLE PROJECT}
+\newcommand{\projectDocumentName}{Project Document}
+\newcommand{\projectAuthorName}{Iquer Galardi}
+
+% remove tabular at paragraph
+\setlength{\parindent}{0cm}
+
+% from 0.X to just X in sections
+\renewcommand{\thesection}{\arabic{section}}
+
+% chapter command, newpage and section
+\newcommand{\newChapter}[1]{\newpage \vspace{1cm} \section{#1}}
+
+% begin of the template
+\begin{document}
+    % setup header
+    \pagestyle{fancy}
+    \fancyhf{}
+    \lhead{\includegraphics[height=30pt,keepaspectratio]{templateImages/logo.png}}
+    \rhead{\projectName}
+
+    \cfoot{\thepage}
+
+    % Add title to the 
+    \begin{center}
+        \LARGE{\textbf{\projectDocumentName}}
+    \end{center}
+    \begin{center}
+        \textit{\projectAuthorName}
+    \end{center}
+    \vspace{1mm}
+    
+    \input{body.tex}
+\end{document}
